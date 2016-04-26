@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>c1fapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://bootswatch.com/darkly/bootstrap.css" rel="stylesheet" media="screen">
+    <!--<style type="text/css">
+      .container {
+        max-width: 1000px;
+        padding-top: 50px;
+      }
+    </style>-->
+   <style type="text/css">
+    table {
+      font-family: Century Gothic;
+      font-size: 12px;  
+    }  
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">c1fapp Threat Feeds Results</a>
+          </div>
+
+    </nav>
+
+    <div class="container">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+          <h3 class="panel-title">Domain/IP: {{domain_name}} <span class="label label-success pull-right">Number of results found: {{number}}</span></h3>
+        </div>
+        <div class="panel-body">
+        <!-- Table -->
+          <table class="table table-striped table-hover">
+            <thead>
+                  <tr><th>#</th><th>Feed Label</th><th>Domain</th><th>Description</th><th>Assessment</th><th>Confidence</th><th>Report Time</th><th>IP Address</th><th>ASN</th></tr>
+                </thead>
+            {% for res in c1fappres %}
+               <tr><th>{{loop.index}}</th><th>{{''.join(res['feed_label'])}}</th><th>{{''.join(res['domain'])}}</th><th>{{''.join(res['description'])}}</th><th>{{''.join(res['assessment'])}}</th><th>{{''.join(res['confidence'])}}</th><th>{{''.join(res['reportime'])}}</th><th>{{''.join(res['ip_address'])}}</th><th>{{''.join(res['asn'])}}</th></tr>
+            {% endfor %}
+          </div>
+      </div>
+    </div>
+   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    </body>
+</html>
+
