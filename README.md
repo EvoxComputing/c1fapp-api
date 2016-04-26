@@ -111,6 +111,10 @@ Response
 
 ```
 
+### Example usage
+
+python c1fapp-api-example.py -s www.google.com -f test
+
 ### What are the restrictions for API key usage?
 
 Depending on the subscription you have, the below (hard limit) restrictions apply on the API usage
