@@ -8,6 +8,22 @@ When you query the C1fApp API you will not receive dymanic results, but only sta
 
 We provide historic searches and the API is looking up to three months in the past from the time of query. So if an IPv4 address for example appeared in a feed two months ago, the search will still return this result. To make it easier for the end user or device to evaluate the result we suggest to look at the last time this entry appeared in the feeds. 
 
+### Example usage
+```
+python c1fapp-api-example.py -s www.google.com -f projects.globaltronics.net
+
+Number of results found <114>.
++-----------------+----------------------------+----------------------------+------------+------------+------------+----------------+-------+
+|    feed label   |           domain           |        description         | assessment | confidence | reportime  |   ipaddress    |  asn  |
++-----------------+----------------------------+----------------------------+------------+------------+------------+----------------+-------+
+|     Abuse.ch    | projects.globaltronics.net |        Zeus botnet         |   botnet   |     70     | 2016-03-31 | 98.131.185.136 | 32392 |
+|     Abuse.ch    | projects.globaltronics.net |        Zeus botnet         |   botnet   |     80     | 2016-04-23 | 98.131.185.136 | 32392 |
+|     Abuse.ch    | projects.globaltronics.net |        Zeus botnet         |   botnet   |     80     | 2016-04-24 | 98.131.185.136 | 32392 |
+|     Abuse.ch    | projects.globaltronics.net |        Zeus botnet         |   botnet   |     80     | 2016-04-26 | 98.131.185.136 | 32392 |
+|     Abuse.ch    | projects.globaltronics.net |    Zeus botnet domains     |   botnet   |     85     | 2016-04-25 | 98.131.185.136 | 32392 |
+|     Abuse.ch    | projects.globaltronics.net |        Zeus botnet         |   botnet   |     80     | 2016-04-29 | 98.131.185.136 | 32392 |
+
+```
 
 ### Use the API interface
 REST API with JSON
@@ -112,9 +128,6 @@ Response
 
 ```
 
-### Example usage
-
-python c1fapp-api-example.py -s www.google.com -f test
 
 ### What are the restrictions for API key usage?
 
