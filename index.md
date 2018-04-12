@@ -7,6 +7,8 @@ When you query the C1fApp API you will not receive dymanic results, but only sta
 
 We provide historic searches and the API is looking up to three months in the past from the time of query. So if an IPv4 address for example appeared in a feed two months ago, the search will still return this result. To make it easier for the end user or device to evaluate the result we suggest to look at the last time this entry appeared in the feeds. 
 
+This project is contributed by https://github.com/gfek
+
 ### Example usage
 
 ```
@@ -123,7 +125,7 @@ Response
 Depending on the subscription you have, the below (hard limit) restrictions apply on the API usage
 
 
-| First Header  | Second Header |
+| License  | API Limit |
 | ------------- | ------------- |
 | Light  | 50 API requests/day  |
 | Premium  | 3K API requests/day  |
