@@ -1,0 +1,8 @@
+title: C1fApp-Api
+description: C1fApp API documentation
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-modernist
+
+gems:
+  - jekyll-mentions
