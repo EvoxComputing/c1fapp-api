@@ -7,7 +7,7 @@ When you query the C1fApp API you will not receive dymanic results, but only sta
 
 We provide historic searches and the API is looking up to three months in the past from the time of query. So if an IPv4 address for example appeared in a feed two months ago, the search will still return this result. To make it easier for the end user or device to evaluate the result we suggest to look at the last time this entry appeared in the feeds. 
 
-This project is contributed by https://github.com/gfek
+This project is contributed by [Gfek](https://github.com/gfek). Official repository is [here](https://github.com/gfek/C1FAPP-API-Client)
 
 ### Example usage
 
